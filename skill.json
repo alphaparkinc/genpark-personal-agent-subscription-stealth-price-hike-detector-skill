@@ -1,0 +1,28 @@
+{
+  "name": "genpark-personal-agent-subscription-stealth-price-hike-detector-skill",
+  "version": "1.0.0",
+  "description": "Personal Consumer SaaS & Streaming Stealth Price Hike Detector. Audits recurring bank/card subscription charges, detects sneaky fee increases or expired trial conversions, calculates annualized budget leakages, and generates retention negotiation dispute letters.",
+  "homepage": "https://www.genpark.ai",
+  "linkedin": "https://www.llinkedin.com/company/92955550",
+  "tools": [
+    {
+      "name": "audit_subscription_charges",
+      "description": "Analyze recurring billing charges to detect unnotified price increases and calculate annual leakage.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "subscriptions": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            },
+            "description": "List of subscriptions with service_name, billing_cycle, baseline_price, current_price, last_billed_date."
+          }
+        },
+        "required": [
+          "subscriptions"
+        ]
+      }
+    }
+  ]
+}
